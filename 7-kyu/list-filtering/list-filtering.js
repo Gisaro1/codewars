@@ -1,3 +1,5 @@
 function filter_list(l) {
- return l.filter(function(n){return typeof n == 'number'})
+  // Return a new array with the strings filtered out
+   return l.filter(function(n){return typeof n == 'number'});
 }
+​
