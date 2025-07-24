@@ -1,3 +1,3 @@
 function unusualFive() {
-  return [,,,,,].length
+  return'     '.length;
 }
