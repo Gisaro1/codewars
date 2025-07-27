@@ -1,4 +1,4 @@
 function doubleChar(str) {
-  return str.split('').reduce((acc, char) => acc + char + char, '');
+return str.split("").map(z => z+z).join("")
 }
 ​
