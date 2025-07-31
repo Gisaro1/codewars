@@ -1,17 +1,7 @@
-function validatePIN(pin) {
-  // Check for valid length
-  if (pin.length !== 4 && pin.length !== 6) {
-    return false;
+function validatePIN (pin) {
+  //return true or false
+  if (pin.length === 4 || pin.length === 6){
+    return pin.split('').every((num) => !isNaN(parseInt(num)))
   }
-​
-  // Check if all characters are digits
-  for (let i = 0; i < pin.length; i++) {
-    if (pin[i] < '0' || pin[i] > '9') {
-      return false;
-    }
-  }
-​
-  // If we passed all checks, it's valid
-  return true;
+  return false;
 }
-​
