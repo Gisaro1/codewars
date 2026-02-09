@@ -1,17 +1,19 @@
-function countPositivesSumNegatives(input) {
-  if (!input || input.length === 0) return [];
+function countPositivesSumNegatives(arr) {
+  if (!arr || arr.length === 0) {
+    return [];
+  }
 ​
-  let countPositives = 0;
-  let sumNegatives = 0;
+  let count = 0; // ✅ count must be declared
+  let sum = 0;
 ​
-  for (let num of input) {
-    if (num > 0) {
-      countPositives++;
-    } else if (num < 0) {
-      sumNegatives += num;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      count++; // ✅ we're using count here
+    } else if (arr[i] < 0) {
+      sum += arr[i];
     }
   }
 ​
-  return [countPositives, sumNegatives];
+  return [count, sum]; // ✅ return the result
 }
 ​
