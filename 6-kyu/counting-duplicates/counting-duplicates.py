@@ -1,10 +1,7 @@
+from collections import Counter
 def duplicate_count(text):
     text = text.lower()
-    char_count = {}
+    counts = Counter(text)
     
-    for char in text :
-        char_count[char] = char_count.get(char,0) + 1
-    
-    return sum( 1 for count in char_count.values() if count > 1)
-   
+    return sum(1 for c in counts.values() if c > 1 )
 ​
