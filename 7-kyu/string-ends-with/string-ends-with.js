@@ -1,4 +1,1 @@
-function solution(str, ending){
-  // TODO: complete
-  return str.endsWith(ending);
-}
+const solution = (str,ending) => str.endsWith(ending);
