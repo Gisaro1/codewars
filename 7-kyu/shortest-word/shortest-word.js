@@ -1,4 +1,5 @@
 function findShort(s){
-const words = s.split(' ');
-  return words.length ? Math.min(...words.map(word => word.length)): 0;
+  let word = s.split(' ')
+  let length = word.map(word => word.length)
+  return Math.min(...length)
 }
