@@ -1,11 +1,10 @@
 function calculateYears(principal, interest, tax, desired) {
     let y = 0
-    while (principal < desired){
-      let income = principal * interest
+    for(let  i = principal; i < desired;y++){
+      let income = i * interest
       let taxPaid = income * tax
-      let netprofit = income - taxPaid
-      principal += netprofit
-      y++
+      let netProfit = income - taxPaid
+      i+= netProfit
     }
   return y
 }
