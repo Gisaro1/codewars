@@ -1,8 +1,7 @@
-function max(list) {
-  return Math.max(...list);
+function min(arr) {
+    return Math.min(...arr);
 }
 ​
-function min(list) {
-  return Math.min(...list);
+function max(arr) {
+    return Math.max(...arr);
 }
-​
