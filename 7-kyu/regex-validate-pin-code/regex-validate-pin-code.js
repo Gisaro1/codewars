@@ -1,7 +1,14 @@
 function validatePIN (pin) {
-  //return true or false
-  if (pin.length === 4 || pin.length === 6){
-    return pin.split('').every((num) => !isNaN(parseInt(num)))
+if (pin.length !== 4 && pin.length !== 6) {
+    return false;
   }
-  return false;
+for(let i = 0 ; i < pin.length; i++){
+    if (pin[i] < '0' || pin[i] > '9') {
+      return false;
+    }
 }
+return true
+}
+console.log(validatePIN(1,2,4,4))
+​
+​
