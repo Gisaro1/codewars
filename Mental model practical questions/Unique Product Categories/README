@@ -1,0 +1,29 @@
+You are given an array of products with categories:
+
+javascript
+const products = [
+  { name: "Laptop", category: "Electronics" },
+  { name: "Shirt", category: "Clothing" },
+  { name: "Mouse", category: "Electronics" },
+  { name: "Jeans", category: "Clothing" },
+  { name: "Phone", category: "Electronics" }
+];
+Task:
+Write a function getUniqueCategories(products) that returns an object containing:
+
+categories: an array of unique category names (preserving first occurrence order)
+
+firstCategory: the first unique category
+
+total: number of unique categories
+
+Use for...of, Set, and destructuring. Do not modify the original array.
+
+Expected output:
+
+js
+{
+  categories: ["Electronics", "Clothing"],
+  firstCategory: "Electronics",
+  total: 2
+}

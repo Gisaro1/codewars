@@ -1,5 +1,4 @@
-const uniqueInOrder = iterable =>{
-let text = typeof iterable === 'string' ? iterable.split('') : iterable
-return text.filter((item,index) => item !== text[index - 1])
+const isValidWalk = walk =>{
+    return walk.length === 10 && walk.filter(d => d === 'n').length  === walk.filter(d=> d==='s').length  && walk.filter(d => d === 'w').length  === walk.filter(d=> d === 'e').length 
 }
-console.log(uniqueInOrder('1222333456789'))
+console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']))
