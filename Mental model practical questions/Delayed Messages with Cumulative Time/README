@@ -1,0 +1,19 @@
+You are given an array of messages where each has a duration in seconds (not milliseconds). Each message should be displayed after the sum of all previous durations.
+
+javascript
+const messages = [
+  { text: "Step 1: Preparing data", duration: 2 },
+  { text: "Step 2: Processing", duration: 3 },
+  { text: "Step 3: Finalizing", duration: 1 },
+  { text: "Step 4: Done!", duration: 2 }
+];
+Task:
+Write a function displayCumulativeMessages(messages) that prints each message after the cumulative time (in seconds). The first message appears after 2 seconds, the second after 2+3=5 seconds, the third after 2+3+1=6 seconds, etc. Use setTimeout and a loop. Do not use async/await.
+
+Expected output (timing):
+
+text
+(After 2s) Step 1: Preparing data
+(After 5s) Step 2: Processing
+(After 6s) Step 3: Finalizing
+(After 8s) Step 4: Done!
