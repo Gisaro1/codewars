@@ -1,0 +1,31 @@
+Task: Write a function named groupStudentsByCourse that takes an array of student objects as an argument. Each student has a name, a grade, and a list of courses they are enrolled in.
+const students = [
+  {
+    name: "Alice",
+    grade: 85,
+    courses: ["Math", "Science"]
+  },
+  {
+    name: "Bob",
+    grade: 65,
+    courses: ["Math"]
+  },
+  {
+    name: "Charlie",
+    grade: 90,
+    courses: ["Science"]
+  },
+  {
+    name: "David",
+    grade: 75,
+    courses: ["Math"]
+  }
+];
+
+groupStudentsByCourse(students);
+
+// Expected output:
+Map {
+  "Math" => ["Alice", "David"],
+  "Science" => ["Alice", "Charlie"]
+}
