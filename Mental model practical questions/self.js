@@ -1,11 +1,16 @@
-const classroom = {
-  students: ["Alice", "Bob", "Charlie"],
-  *[Symbol.iterator](){
-    for(const student of this.students){
-        yield student
-    }
-  }
-  }
-  for(const name of classroom){
-    console.log(name)
-  }
+function* demo(){
+    console.log('Start')
+    yield 1;
+    console.log('ready?')
+    yield 2;
+    console.log('we done')
+    yield 3
+}
+
+const g = demo();
+console.log('before .next()')
+g.next()
+
+console.log('calling')
+g.next()
+g.next()
