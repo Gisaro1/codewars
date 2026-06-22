@@ -1,21 +1,11 @@
 const classroom = {
   students: ["Alice", "Bob", "Charlie"],
-  [Symbol.iterator](){
-    let index = 0
-    const names = this.students
-    return{
-        next(){
-            if(index < names.length){
-                return{
-                    value:names[index++],
-                    done:false
-                }
-            }
-              return{done:true}
-        }
+  *[Symbol.iterator](){
+    for(const student of this.students){
+        yield student
     }
   }
-}
+  }
   for(const name of classroom){
-console.log(name)
+    console.log(name)
   }
