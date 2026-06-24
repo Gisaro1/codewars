@@ -1,7 +1,3 @@
-const person = {
-    name: 'CCCXLVII',
-    greet:()=>{
-        console.log(`waguan ${person.name} bro ??`)
-    }
-}
-person.greet()
+let richard = {status:'waguan fr'}
+let agent = new Proxy(richard, {})
+console.log(agent.status)
