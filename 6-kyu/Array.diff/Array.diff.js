@@ -1,5 +1,5 @@
 const arrayDiff = (a, b) => {
-  const merge = [...a,...b];
-return merge.filter(char => merge.indexOf(char)=== merge.lastIndexOf(char))
+let set = new Set(b)
+return a.filter(char => set.has(char))
 }
-console.log(arrayDiff([1,2,3],[1,3,4]))
+console.log(arrayDiff([1,2,3],[1,3,2,4]))
