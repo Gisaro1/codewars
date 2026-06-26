@@ -12,18 +12,18 @@ const user = {
 const extractUserData = (user,fields) =>{
 const result = {};
 const {id,profile} = user;
-const arr = {
-    'id':id,
-    'profile.name':profile.name,
-    'profile.email':profile.email,
-    'profile.preferences.theme':profile.preferences.theme,
-    'profile.preferences.notifications':profile.preferences.notifications
+const obj ={
+  'id':id,
+  'profile.name':profile.name,
+  'profile.email':profile.email,
+  'profile.preferences.theme':profile.preferences.theme
 }
-for(let i = 0;i<fields.length;i++){
-    let char = fields[i]
-    if(arr.hasOwnProperty(char))
-        result[char] = arr[char]
-    }
-    return {...result}
+for(let i = 0; i< fields.length;i++){
+  const char = fields[i];
+  if(obj.hasOwnProperty(char)){
+    result[char] = obj[char]
+  }
 }
-console.log(extractUserData(user,['id', 'profile.name']))
+return result
+}
+console.log(extractUserData(user,['id', 'profile.name','theme' ]))
