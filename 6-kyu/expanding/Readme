@@ -5,3 +5,32 @@ You will be given a number and you will need to return it as a string in Expande
    45 --> "40 + 5"
 70304 --> "70000 + 300 + 4"
 NOTE: All numbers will be whole numbers greater than 0.
+
+
+
+
+
+
+
+
+
+
+
+
+Write Number in Expanded Form - Part 2
+This is version 2 of my 'Write Number in Exanded Form' Kata.
+
+You will be given a number and you will need to return it as a string in expanded form :
+
+expanded form illustration
+
+For example:
+
+807.304 --> "800 + 7 + 3/10 + 4/1000"
+  1.24  --> "1 + 2/10 + 4/100"
+  7.304 --> "7 + 3/10 + 4/1000"
+  0.04  --> "4/100"
+
+  stashing
+  work coverting rgx and rgb 2 functions
+  sharing new words you have learned daily remmber

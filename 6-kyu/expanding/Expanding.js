@@ -10,4 +10,4 @@ for(let i = 0;i < str.length;i++){
 }
 return result.join(' + ')
 }
-console.log(expandedForm(22))
+console.log(expandedForm(2002))
