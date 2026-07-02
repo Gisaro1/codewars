@@ -10,4 +10,4 @@ for(let i = 0; i < string.length; i++){
 }
   return result
 }
-console.log(count('helo'))
+console.log(count('heloooo'))
