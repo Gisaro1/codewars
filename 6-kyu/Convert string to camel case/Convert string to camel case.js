@@ -1,17 +1,8 @@
 const toCamelCase = str =>{
-const text = str.replace(/[-]/g,'-');
-let result = '';
-let capital = false;
-for (let char of text){
-   if(char === '-'){
-    capital = true;
-   } else if(capital){
-    result += char.toUpperCase()
-    capital = false;
-   } else{
-    result += char
-   }
+const word = str.split(/[-_]/);
+for(let i = 0 ; i < word.length;i++){
+    word[i] = word[i][0].toUpperCase() + word[i].slice(1);
 }
-return result;
+return word.join('')
 }
-console.log(toCamelCase('the-stealth-warrior'))
+console.log(toCamelCase('the_stealth-warrior'))
