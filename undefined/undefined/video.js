@@ -1,14 +1,17 @@
-const missletter = arr =>{
-    let result = [];
-    const set = new Set(arr);
-    const start = arr[0].charCodeAt(0);
-    const end = arr[arr.length - 1].charCodeAt(0);
-    for(let i = start; i < end;i++){
-        const text = String.fromCharCode(i);
-        if(!set.has(text)){
-            result.push(text)
-        }
-    }
-    return result
-}
-console.log(missletter(['a','z']))
+
+   /// callback
+setTimeout(()=>{
+    console.log('waguan in 2sec')
+},5000)
+
+// callback hell
+
+setTimeout(()=>{
+    console.log('wassup'); // one sec
+    setTimeout(()=>{
+        console.log('are you good?'); // 2 sec
+        setTimeout(()=>{
+            console.log('never mind'); // 3 sec
+        },3000)
+    },2000)
+},1000)
