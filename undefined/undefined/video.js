@@ -15,3 +15,22 @@ setTimeout(()=>{
         },3000)
     },2000)
 },1000)
+
+// promises
+
+const newPromise = new Promise((resolve,reject)=>{
+const rand = Math.floor(Math.random() * 2)
+if(rand === 0){
+    resolve()
+} else{
+    reject()
+}
+});
+
+newPromise
+        .then(()=>{
+            console.log('success')
+        })
+        .catch(()=>{
+            console.error('failed')
+        });
