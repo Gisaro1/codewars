@@ -8,4 +8,4 @@ const findUniq = arr =>{
     })
     return text
 }
-console.log(findUniq([ 'Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a' ]))
+console.log(findUniq([ 'Aa', 'aaa', 'aaaaa', 'Billy', 'Aaaa', 'AaAaAa', 'a' ]))
