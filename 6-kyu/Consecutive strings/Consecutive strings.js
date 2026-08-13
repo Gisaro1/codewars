@@ -1,13 +1,9 @@
-    const longestConsec =(strarr, k) =>{
-        let n = strarr.length;
-        let longest = '';
-        if(n === 0 || k<=0 || k>n) return ''
-        for(let i = 0; i < n-k;i++){
-            let current = strarr.slice(i,i+k).join("");
-            if(current.length > longest.length){
-                longest = current
-            }
-        }
-        return longest
-    }
+const longestConsec = (strarr, k) => {
+  if (strarr.length === 0 || k <= 0 || k > strarr.length) return '';
+
+  return strarr
+    .map((_, i) => strarr.slice(i, i + k).join(''))
+    .reduce((longest, current) => 
+      current.length > longest.length ? current : longest, '');
+};
     console.log(longestConsec(["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz", "waguan", "yooolaaa", "waverrrrr", "ogggfr"],4))
