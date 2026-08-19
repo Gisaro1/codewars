@@ -1,4 +1,4 @@
-function getMiddle(s) {
+const getMiddle = s => {
   let length = s.length
   let average = Math.floor(length /2)
   if(length % 2 === 0){
@@ -7,3 +7,4 @@ function getMiddle(s) {
     return s.substring(average,average+1)
   }
 }
+console.log(getMiddle('Gisaro'))
