@@ -7,4 +7,4 @@ const getMiddle = s => {
     return s.substring(average,average+1)
   }
 }
-console.log(getMiddle('Gisaro'))
+console.log(getMiddle('Gisar'))
