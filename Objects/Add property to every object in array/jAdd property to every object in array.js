@@ -10,7 +10,7 @@ var questions = [{
 
 const addNewProperty = questions => {
     return questions.map(char => {
-        char.userAnswer = null
+        char.usersAnswer = null
         return char
     })
 };
