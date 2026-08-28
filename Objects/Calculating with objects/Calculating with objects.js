@@ -8,31 +8,19 @@ class Num {
   valueOf() {
     return {num: this.num};
   }
-  add(other){
-    return this.num + other.num
-  }
-  sub(other){
-    return this.num - other.num
-  }
-  mult(other){
-    return this.num * other.num
-  }
-  div(other){
-    return this.num / other.num
-  }
-  math(other){
-    return Math.floor(other)
+  [Symbol.toPrimitive](hint){
+    if(hint === "number" || hint === "default" ){
+        return this.num
+    }
+      return this.toString
   }
 }
+
 const x = new Num(100);
 const y = new Num(5);
-const a = x.add(y)
-const s = x.sub(y)
-const m = x.mult(y);
-const d = x.div(y)
-const ma = x.math(100.5)
-x.toString() == "the number is " + this.num
-x.valueOf() == {num: this.num}
-console.log(x)
-
-console.log(ma)
+x + y == 105;
+x*y == 500;
+x-y == 95
+x/y == 20
+Math.floor(new Num(100.5)) == 100
+console.log(new Num(5) + new Num(5))
