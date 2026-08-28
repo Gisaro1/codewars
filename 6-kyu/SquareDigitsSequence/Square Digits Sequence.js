@@ -11,4 +11,4 @@ const squareDigitsSequence = ab => {
     return result.length
 
 }
-console.log(squareDigitsSequence(16))
+console.log(squareDigitsSequence(569))
