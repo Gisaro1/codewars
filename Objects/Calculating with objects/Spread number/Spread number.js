@@ -3,4 +3,4 @@ Number.prototype[Symbol.iterator] = function* (){
     yield i;
   }
 }
-console.log([...5]);
+console.log([...10]);
