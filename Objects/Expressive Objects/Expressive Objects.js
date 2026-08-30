@@ -1,14 +1,19 @@
 const evaluate = (left,op,right) => {
-    const result = {}
+    const result1 = {}
     for(const key in left['multiply']){
+        const arr = left['multiply'][key]
         if(key === 'add'){
-            const sum = left['multiply']['add'].reduce((num,acc) => acc + num, 0)
-            return (`add: ${sum}`)
-        } else if(key === 'subtract'){
-            const subtract = left['multiply']['add'].reduce((num,acc) => num * acc, 1) 
-            return (`substract: ${subtract}`)
+            result.add = arr.reduce((acc,num) => acc + num,0)
+        } 
+        else if(key === 'subtract'){
+            result.subtract = arr.reduce((num,acc) => num - acc, 0) 
+        } else if(key === 'multiply'){
+            result.multiply = arr.reduce((num,acc) => num * acc, 1) 
+        } else {
+            result.divide = arr.reduce((num,acc) => num / acc, 1)
         }
     }
+    return result1
 }
 const left = {
     'multiply': {
