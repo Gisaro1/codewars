@@ -1,8 +1,12 @@
-const evaluate = (left) => {
+const evaluate = (left,op,right) => {
+    const result = {}
     for(const key in left['multiply']){
         if(key === 'add'){
             const sum = left['multiply']['add'].reduce((num,acc) => acc + num, 0)
             return (`add: ${sum}`)
+        } else if(key === 'subtract'){
+            const subtract = left['multiply']['add'].reduce((num,acc) => num * acc, 1) 
+            return (`substract: ${subtract}`)
         }
     }
 }
