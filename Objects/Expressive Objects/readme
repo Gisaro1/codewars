@@ -5,14 +5,14 @@
 
 // For example:
 
-// const left = {
-//     'multiply': {
-//         'add': [1, 2, 3, 4, 5],
-//         'subtract': [5, 6, 7, 8, 9],
-//         'multiply': [1, 2, 3, 4, 5],
-//         'divide': [1, 2, 3, 4, 5]
-//     }
-// };
+const left = {
+    'multiply': {
+        'add': [1, 2, 3, 4, 5],
+        'subtract': [5, 6, 7, 8, 9],
+        'multiply': [1, 2, 3, 4, 5],
+        'divide': [1, 2, 3, 4, 5]
+    }
+};
 // // You will reduce each array based on its key. So you will start of with add(ing) [1,2,3,4,5] => 15
 // // then subtract(ing) [5, 6, 7, 8, 9] => -25 etc. Once all arrays have been reduced, you will perform the
 // // root key operation on all the reduced arrays. So in this case, you will multiply each reduced array with
