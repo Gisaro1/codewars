@@ -3,17 +3,18 @@ const evaluate = (left,op,right) => {
     for(const key in left['multiply']){
         const arr = left['multiply'][key]
         if(key === 'add'){
-            result.add = arr.reduce((acc,num) => acc + num,0)
+            result1.add = arr.reduce((acc,num) => acc + num,0)
         } 
         else if(key === 'subtract'){
-            result.subtract = arr.reduce((num,acc) => num - acc, 0) 
+            result1.subtract = arr.reduce((num,acc) => num - acc, 0) 
         } else if(key === 'multiply'){
-            result.multiply = arr.reduce((num,acc) => num * acc, 1) 
+            result1.multiply = arr.reduce((num,acc) => num * acc, 1) 
         } else {
-            result.divide = arr.reduce((num,acc) => num / acc, 1)
+            result1.divide = arr.reduce((num,acc) => num / acc, 1)
         }
     }
-    return result1
+    const total = Object.values(result1).reduce((num,acc) => num + acc, 0)
+    return total
 }
 const left = {
     'multiply': {
