@@ -18,12 +18,12 @@
 // // root key operation on all the reduced arrays. So in this case, you will multiply each reduced array with
 // // each other. The order is ALWAYS value of 'add' key first, then 'subtract', then 'multiply' and finally 
 // // 'divide'.
-const right = {
-    'subtract': {
-        'add': [1, 2, 3, 4, 5],
-        'subtract': [1, 2, 3, 4, 5],
-        'multiply': [1, 2, 3, 4, 5],
-        'divide': [1, 2, 3, 4, 5]
-    }
-};
+// const right = {
+//     'subtract': {
+//         'add': [1, 2, 3, 4, 5],
+//         'subtract': [1, 2, 3, 4, 5],
+//         'multiply': [1, 2, 3, 4, 5],
+//         'divide': [1, 2, 3, 4, 5]
+//     }
+// };
 // evaluate(left, 'add', right) === -467.0083333333333
