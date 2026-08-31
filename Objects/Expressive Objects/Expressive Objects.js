@@ -28,8 +28,16 @@ const evaluate = (left,op,right) => {
             }
         }
     const total2 = Object.values(result1).reduce((num,acc) => num - acc, 0)
-    const total1 = Object.values(result1).reduce((num,acc) => num * acc, 0)
-    return `${total1} ${op} ${total2}`
+    const total1 = Object.values(result1).reduce((num,acc) => num * acc, 1)
+    if(op === 'add'){
+        return total1 + total2
+    } else if(op === 'subtract'){
+        return total1- total2
+    } else if(op === 'multiply'){
+        return total1 * total2
+    } else {
+        return total1 / total2
+    }
 }
 const left = {
     'multiply': {
