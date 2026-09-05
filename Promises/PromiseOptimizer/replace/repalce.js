@@ -1,2 +1,2 @@
 const akira = (str) => str.replace(/[^a-z]/g,'').split('').length
-console.log(akira('hello454AWWE'))
+console.log(akira('hello454AWWEedd'))
