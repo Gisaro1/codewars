@@ -8,7 +8,10 @@ const splittin = num => {
             let answer = number * Math.pow(10,str.length-1 - i)
             result.push(answer)
         }
+        if(char === '.'){
+            for(let j = str.indexOf(.); j < )
+        }
     }
     return result.join(' + ')
 }
-console.log(splittin(12))
+console.log(splittin(1000200));
