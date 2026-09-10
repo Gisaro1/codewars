@@ -20,7 +20,7 @@ const limitAsync= async(tasks, limit) => {
     for(let i = 0; i < limit;i++){
         worker.push(helper());
     }
-    await Promise.allSettled(worker)
+    await Promise.race(worker)
     return result
 }
 const urls = [
