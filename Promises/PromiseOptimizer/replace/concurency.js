@@ -20,14 +20,14 @@ const limitAsync= async(tasks, limit) => {
     for(let i = 0; i < limit;i++){
         worker.push(helper());
     }
-    await Promise.all(worker)
+    await Promise.allSettled(worker)
     return result
 }
 const urls = [
   "https://jsonplaceholder.typicode.com/todos/1",
   "https://jsonplaceholder.typicode.com/todos/2",
   "https://jsonplaceholder.typicode.com/todos/3",
-  "https://jsonplaceholder.typicode.com/todos/4",
+  "https://jsonplaceholder.typicode.com/todos/",
   "https://jsonplaceholder.typicode.com/todos/5"
 ];
 console.log(await limitAsync(urls,2))
