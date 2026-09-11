@@ -32,5 +32,5 @@ const nine = operation => {
 const plus = b => a => a + b
 const minus = b => a => a - b   
 const times = b => a => a * b
-const dividedBy = b => a => a / b 
+const dividedBy = b => a => Math.floor(a / b) 
 console.log(seven(times(five())))
